@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result!</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans|Roboto|Rubik|Bangers|Titillium+Web" rel="stylesheet">    
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  
+  <body id="bod" class="text-center">
+    
+    <% @computer_icon = "far fa-hand-" + @computer_move.downcase %>
+    <% @player_icon = "far fa-hand-" + @player_move.downcase %>
+    
+    <i class="<%=@player_icon%>"></i>
+    <span id="vs">VS</span>
+    <i id="cpu" class="<%=@computer_icon%>"></i>
+    
+    <div id="result">
+    <%if @game.won?%>
+      <h1>YOU'RE A WINNER!</h1>
+    <%elsif @game.tied?%>
+      <h1>IT'S A TIE!</h1>
+    <%else%>
+      <% insult_array = ["IS THAT ALL YOU GOT?", "MY DOG CAN DO BETTER THAN THAT!", "TRY HARDER NEXT TIME!", "AWWW, YOU LOST!!!"]%>
+      <% insult = insult_array[rand(4)]%>
+      <h1><%= insult %></h1>
+    <%end%>
+    </div>
+
+    <form method="POST" action="/back">
+      <input class="btn btn-outline-secondary big btn-lg" type="submit" name="back" value="PLAY AGAIN">
+    </form>
+
+  </body>
+  
+</html>

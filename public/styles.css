@@ -1,0 +1,67 @@
+body {
+    background-color: white;
+}
+
+#welcome {
+    font-family: 'Bangers', sans-serif;
+    color: maroon;
+    font-size: 5.0em;
+} 
+
+#container {
+    margin-top: 250px;
+}
+
+i {    
+    font-size: 5.0em;
+    color: #043d89;
+}
+
+#cpu {
+    color: #841b1d;
+}
+
+#pick_move {
+    font-size: 3.0em;
+}
+
+#result {
+    font-size: 5.0em;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.btn{
+    background: white;
+}
+
+.btn:hover {
+    background-color: #043d89;
+    
+}
+
+.btn:hover > i {
+    display:block;
+    color: white;
+}
+
+#vs{
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 8.0em;
+}
+
+#bod{
+    margin-top: 200px;
+}
+
+#bod > i {
+    font-size: 10em;
+}
+
+.btn-outline-secondary{
+    width: 25%;
+    border-radius: 1005px;
+    color: inherit;
+}
